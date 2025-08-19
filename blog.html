@@ -8,18 +8,20 @@
 </head>
 <body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100 min-h-screen">
 
-    <!-- Header -->
+   <!-- Header -->
   <header class="bg-gray-900/80 backdrop-blur sticky top-0 z-20 shadow-lg">
     <div class="container mx-auto flex justify-between items-center px-6 py-4">
       <h1 class="text-3xl font-extrabold text-green-400 tracking-wide drop-shadow">Bons Coins du pays</h1>
-      <nav class="space-x-6 hidden md:inline-block">
-        <a href="index.html" class="hover:text-green-400 transition">Accueil</a>
-        <a href="blog.html" class="hover:text-green-400 transition">Blog</a>
-        <a href="contact.html" class="hover:text-green-400 transition">Contact</a>
-         <a href="developpeur.html" class="hover:text-green-400 transition">Dévellopeur</a>
+      <nav>
+        <ul id="menu" class="space-y-2 md:space-y-0 md:flex md:space-x-6 hidden md:flex">
+          <li><a href="index.html" class="hover:text-green-400 transition block md:inline">Accueil</a></li>
+          <li><a href="blog.html" class="hover:text-green-400 transition block md:inline">Blog</a></li>
+          <li><a href="contact.html" class="hover:text-green-400 transition block md:inline">Contact</a></li>
+          <li><a href="developpeur.html" class="hover:text-green-400 transition block md:inline">Dévellopeur</a></li>
+        </ul>
       </nav>
       <!-- Menu mobile -->
-      <button class="md:hidden text-green-400 text-2xl" aria-label="Menu">&#9776;</button>
+      <button id="menuBtn" class="md:hidden text-green-400 text-2xl" aria-label="Menu">&#9776;</button>
     </div>
   </header>
 
