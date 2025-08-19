@@ -9,21 +9,36 @@
 <body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100 min-h-screen">
 
 <!-- Header -->
-  <header class="bg-gray-900/80 backdrop-blur sticky top-0 z-20 shadow-lg">
-    <div class="container mx-auto flex justify-between items-center px-6 py-4">
-      <h1 class="text-3xl font-extrabold text-green-400 tracking-wide drop-shadow">Bons Coins du pays</h1>
-      <nav>
-        <ul id="menu" class="space-y-2 md:space-y-0 md:flex md:space-x-6 hidden md:flex">
-          <li><a href="index.html" class="hover:text-green-400 transition block md:inline">Accueil</a></li>
-          <li><a href="blog.html" class="hover:text-green-400 transition block md:inline">Blog</a></li>
-          <li><a href="contact.html" class="hover:text-green-400 transition block md:inline">Contact</a></li>
-          <li><a href="developpeur.html" class="hover:text-green-400 transition block md:inline">Dévellopeur</a></li>
-        </ul>
-      </nav>
-      <!-- Menu mobile -->
-      <button id="menuBtn" class="md:hidden text-green-400 text-2xl" aria-label="Menu">&#9776;</button>
-    </div>
-  </header>
+<header class="bg-gray-900/80 backdrop-blur sticky top-0 z-50 shadow-lg">
+  <div class="container mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="text-3xl font-extrabold text-green-400 tracking-wide drop-shadow">Bons Coins du pays</h1>
+    <!-- Bouton mobile -->
+    <button id="menuBtn" class="md:hidden text-green-400 text-2xl" aria-label="Menu">&#9776;</button>
+
+    <!-- Menu desktop -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:text-green-400 transition">Accueil</a>
+      <a href="blog.html" class="hover:text-green-400 transition">Blog</a>
+      <a href="contact.html" class="hover:text-green-400 transition">Contact</a>
+      <a href="developpeur.html" class="hover:text-green-400 transition">Dévellopeur</a>
+    </nav>
+  </div>
+
+  <!-- Drawer mobile -->
+  <div id="drawer" class="fixed top-0 right-0 w-64 h-full bg-gray-900 shadow-2xl transform translate-x-full transition-transform duration-300 z-40">
+    <button id="closeDrawer" class="absolute top-4 right-4 text-green-400 text-3xl">&times;</button>
+    <ul class="flex flex-col mt-16 space-y-6 text-green-400 px-6 text-lg">
+      <li><a href="index.html" class="hover:text-green-400/70 transition">Accueil</a></li>
+      <li><a href="blog.html" class="hover:text-green-400/70 transition">Blog</a></li>
+      <li><a href="contact.html" class="hover:text-green-400/70 transition">Contact</a></li>
+      <li><a href="developpeur.html" class="hover:text-green-400/70 transition">Dévellopeur</a></li>
+    </ul>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black/60 hidden z-30"></div>
+</header>
+
   <!-- Hero / Bannière -->
   <section class="relative bg-gradient-to-r from-green-400/10 via-gray-700 to-gray-900 py-12 mb-8">
     <div class="container mx-auto px-6 text-center">
@@ -82,5 +97,31 @@
       </div>
     </div>
   </footer>
+  <script>
+     // Menu mobile
+   
+  const menuBtn = document.getElementById('menuBtn');
+  const drawer = document.getElementById('drawer');
+  const overlay = document.getElementById('overlay');
+  const closeDrawer = document.getElementById('closeDrawer');
+
+  // Ouvrir drawer
+  menuBtn.addEventListener('click', () => {
+    drawer.classList.remove('translate-x-full');
+    overlay.classList.remove('hidden');
+  });
+
+  // Fermer drawer
+  closeDrawer.addEventListener('click', () => {
+    drawer.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+  });
+
+  // Fermer en cliquant sur overlay
+  overlay.addEventListener('click', () => {
+    drawer.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+  });
+  </script>
 </body>
 </html>
