@@ -12,14 +12,16 @@
   <header class="bg-gray-900/80 backdrop-blur sticky top-0 z-20 shadow-lg">
     <div class="container mx-auto flex justify-between items-center px-6 py-4">
       <h1 class="text-3xl font-extrabold text-green-400 tracking-wide drop-shadow">Bons Coins du pays</h1>
-      <nav class="space-x-6 hidden md:inline-block">
-        <a href="index.html" class="hover:text-green-400 transition">Accueil</a>
-        <a href="blog.html" class="hover:text-green-400 transition">Blog</a>
-        <a href="contact.html" class="hover:text-green-400 transition">Contact</a>
-         <a href="developpeur.html" class="hover:text-green-400 transition">Dévellopeur</a>
+      <nav>
+        <ul id="menu" class="space-y-2 md:space-y-0 md:flex md:space-x-6 hidden md:flex">
+          <li><a href="index.html" class="hover:text-green-400 transition block md:inline">Accueil</a></li>
+          <li><a href="blog.html" class="hover:text-green-400 transition block md:inline">Blog</a></li>
+          <li><a href="contact.html" class="hover:text-green-400 transition block md:inline">Contact</a></li>
+          <li><a href="developpeur.html" class="hover:text-green-400 transition block md:inline">Dévellopeur</a></li>
+        </ul>
       </nav>
       <!-- Menu mobile -->
-      <button class="md:hidden text-green-400 text-2xl" aria-label="Menu">&#9776;</button>
+      <button id="menuBtn" class="md:hidden text-green-400 text-2xl" aria-label="Menu">&#9776;</button>
     </div>
   </header>
 
@@ -28,30 +30,29 @@
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-green-400 animate-pulse">Connectez-vous à l'essentiel</h2>
       <p class="mb-8 text-gray-200 text-lg">Trouvez les meilleurs endroits, restaurants, hôtels et loisirs près de vous.</p>
-      <div class="flex justify-center gap-4 flex-wrap mb-4">
-        <input type="text" placeholder="Recherche..." class="p-3 rounded-lg w-64 focus:outline-none focus:ring-2 focus:ring-green-400 bg-gray-800 placeholder:text-gray-400 transition">
-        <input type="text" placeholder="Localisation" class="p-3 rounded-lg w-64 focus:outline-none focus:ring-2 focus:ring-green-400 bg-gray-800 placeholder:text-gray-400 transition">
-        <select class="p-3 rounded-lg w-48 focus:outline-none focus:ring-2 focus:ring-green-400 bg-gray-800 text-gray-100 transition">
+      <div class="flex flex-col sm:flex-row justify-center gap-4 flex-wrap mb-4">
+        <input type="text" placeholder="Recherche..." class="p-3 rounded-lg w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-green-400 bg-gray-800 placeholder:text-gray-400 transition">
+        <input type="text" placeholder="Localisation" class="p-3 rounded-lg w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-green-400 bg-gray-800 placeholder:text-gray-400 transition">
+        <select class="p-3 rounded-lg w-full sm:w-48 focus:outline-none focus:ring-2 focus:ring-green-400 bg-gray-800 text-gray-100 transition">
           <option value="">Catégorie</option>
           <option value="restaurant">Restaurant</option>
           <option value="hotel">Hôtel</option>
           <option value="cafe">Café</option>
         </select>
-        <button class="bg-green-400 text-gray-900 px-8 py-3 rounded-lg font-bold shadow hover:bg-green-500 transition">Rechercher</button>
+        <button class="bg-green-400 text-gray-900 px-8 py-3 rounded-lg font-bold shadow hover:bg-green-500 transition w-full sm:w-auto">Rechercher</button>
       </div>
-      <div class="flex justify-center gap-6 mt-6">
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
         <span class="bg-green-400/20 text-green-300 px-4 py-2 rounded-full font-semibold">+100 lieux référencés</span>
         <span class="bg-red-600/20 text-red-400 px-4 py-2 rounded-full font-semibold">Nouveautés chaque semaine</span>
       </div>
     </div>
-    <!-- Illustration décorative -->
     <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-900 to-transparent"></div>
   </section>
 
   <!-- Catégories populaires -->
   <section class="container mx-auto px-6 mb-12">
     <h3 class="text-2xl font-bold text-green-400 mb-6">Catégories populaires</h3>
-    <div class="flex gap-6 flex-wrap justify-center">
+    <div class="flex flex-wrap gap-6 justify-center">
       <div class="bg-gray-800 rounded-xl px-6 py-4 flex items-center gap-3 shadow hover:scale-105 transition cursor-pointer">
         <span class="text-2xl">🍽️</span>
         <span class="font-semibold">Restaurants</span>
@@ -72,47 +73,40 @@
   </section>
 
   <!-- Section Cards / Listing -->
-  <section class="container mx-auto px-2 py-8 grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3">
+  <section class="container mx-auto px-2 py-8 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
     <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:scale-105 hover:shadow-2xl transition cursor-pointer group" data-index="0">
-     <img src="assets/images/R.jpeg" alt="Grand hotel de kintélé" class="w-full h-32 object-cover group-hover:brightness-90 transition">
+      <img src="assets/images/R.jpeg" alt="Grand hotel de kintélé" class="w-full h-32 object-cover group-hover:brightness-90 transition">
       <div class="p-5">
         <h3 class="text-xl font-bold text-green-400 mb-2">Grand hotel de kintélé</h3>
         <p class="text-gray-300 mb-1">Rue de la Paix, Brazzaville</p>
         <p class="text-gray-400 mb-2">Une nuit au paradis pour vous !</p>
-        <!-- Remplace la ligne existante par celle-ci -->
-<span class="inline-block bg-red-600 text-white text-sm px-3 py-1 rounded-full flex items-center gap-1">
-  Note :
-  <span class="text-yellow-400">★★★★★</span>
-  <span class="ml-1 text-white">5 / 5</span>
-</span>
+        <span class="inline-block bg-red-600 text-white text-sm px-3 py-1 rounded-full flex items-center gap-1">
+          Note : <span class="text-yellow-400">★★★★★</span> <span class="ml-1 text-white">5 / 5</span>
+        </span>
       </div>
     </div>
 
     <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:scale-105 hover:shadow-2xl transition cursor-pointer group" data-index="1">
-    <img src="assets/images/R.jpeg" alt="Restaurant L’Espoir" class="w-full h-32 object-cover group-hover:brightness-90 transition">
+      <img src="assets/images/restaurant.jpg" alt="Restaurant L’Espoir" class="w-full h-32 object-cover group-hover:brightness-90 transition">
       <div class="p-5">
         <h3 class="text-xl font-bold text-green-400 mb-2">Restaurant L’Espoir</h3>
         <p class="text-gray-300 mb-1">Avenue de la Cathédrale</p>
         <p class="text-gray-400 mb-2">Spécialités locales et ambiance familiale.</p>
-       <span class="inline-block bg-red-600 text-white text-sm px-3 py-1 rounded-full flex items-center gap-1">
-  Note :
-  <span class="text-yellow-400">★★★★★</span>
-  <span class="ml-1 text-white">5 / 5</span>
-</span>
+        <span class="inline-block bg-red-600 text-white text-sm px-3 py-1 rounded-full flex items-center gap-1">
+          Note : <span class="text-yellow-400">★★★★★</span> <span class="ml-1 text-white">4.8 / 5</span>
+        </span>
       </div>
     </div>
 
     <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:scale-105 hover:shadow-2xl transition cursor-pointer group" data-index="2">
-     <img src="assets/images/R.jpeg" alt="Salon Glossy Hair" class="w-full h-32 object-cover group-hover:brightness-90 transition">
+      <img src="assets/images/salon.jpg" alt="Salon Glossy Hair" class="w-full h-32 object-cover group-hover:brightness-90 transition">
       <div class="p-5">
         <h3 class="text-xl font-bold text-green-400 mb-2">Salon Glossy Hair</h3>
         <p class="text-gray-300 mb-1">Rue des Orchidées</p>
         <p class="text-gray-400 mb-2">Salon de coiffure moderne et services de qualité.</p>
         <span class="inline-block bg-red-600 text-white text-sm px-3 py-1 rounded-full flex items-center gap-1">
-  Note :
-  <span class="text-yellow-400">★★★★★</span>
-  <span class="ml-1 text-white">5 / 5</span>
-</span>
+          Note : <span class="text-yellow-400">★★★★★</span> <span class="ml-1 text-white">4.2 / 5</span>
+        </span>
       </div>
     </div>
   </section>
@@ -145,35 +139,20 @@
   </footer>
 
   <script>
+    // Menu mobile
+    const menuBtn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
     // Données des cards
     const cards = [
-      {
-        img: "assets/images/R.jpeg",
-        title: "Grand hotel de kintélé",
-        location: "Rue de la Paix, Brazzaville",
-        desc: "Une nuit au paradis pour vous !",
-        note: "Note : 5 / 5",
-        details: `<p>Ouvert : 24h/24</p><p>Contact : +242 06 123 4567</p><p>Services : Piscine, Wifi, Spa</p>`
-      },
-      {
-        img: "assets/images/restaurant.jpg",
-        title: "Restaurant L’Espoir",
-        location: "Avenue de la Cathédrale",
-        desc: "Spécialités locales et ambiance familiale.",
-        note: "Note : 4.8 / 5",
-        details: `<p>Ouvert : 11h - 23h</p><p>Contact : +242 06 765 4321</p><p>Services : Terrasse, Wifi</p>`
-      },
-      {
-        img: "assets/images/salon.jpg",
-        title: "Salon Glossy Hair",
-        location: "Rue des Orchidées",
-        desc: "Salon de coiffure moderne et services de qualité.",
-        note: "Note : 4.2 / 5",
-        details: `<p>Ouvert : 9h - 20h</p><p>Contact : +242 06 987 6543</p><p>Services : Coiffure, Manucure</p>`
-      }
+      { img: "assets/images/R.jpeg", title: "Grand hotel de kintélé", location: "Rue de la Paix, Brazzaville", desc: "Une nuit au paradis pour vous !", note: "Note : 5 / 5", details: `<p>Ouvert : 24h/24</p><p>Contact : +242 06 123 4567</p><p>Services : Piscine, Wifi, Spa</p>` },
+      { img: "assets/images/restaurant.jpg", title: "Restaurant L’Espoir", location: "Avenue de la Cathédrale", desc: "Spécialités locales et ambiance familiale.", note: "Note : 4.8 / 5", details: `<p>Ouvert : 11h - 23h</p><p>Contact : +242 06 765 4321</p><p>Services : Terrasse, Wifi</p>` },
+      { img: "assets/images/salon.jpg", title: "Salon Glossy Hair", location: "Rue des Orchidées", desc: "Salon de coiffure moderne et services de qualité.", note: "Note : 4.2 / 5", details: `<p>Ouvert : 9h - 20h</p><p>Contact : +242 06 987 6543</p><p>Services : Coiffure, Manucure</p>` }
     ];
 
-    // Sélectionne toutes les cards
     document.querySelectorAll('.group').forEach((card) => {
       card.addEventListener('click', () => {
         const i = card.getAttribute('data-index');
@@ -188,11 +167,9 @@
       });
     });
 
-    // Fermer la modale
     document.getElementById('closeModal').onclick = () => {
       document.getElementById('modal').classList.add('hidden');
     };
-    // Fermer en cliquant sur le fond
     document.getElementById('modal').onclick = (e) => {
       if (e.target === e.currentTarget) {
         document.getElementById('modal').classList.add('hidden');
