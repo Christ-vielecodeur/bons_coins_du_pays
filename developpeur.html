@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos du développeur</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100 min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-gray-900/80 backdrop-blur sticky top-0 z-20 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-3xl font-extrabold text-green-400 tracking-wide drop-shadow">Bons Coins du pays</h1>
+      <nav class="space-x-6 hidden md:inline-block">
+        <a href="index.html" class="hover:text-green-400 transition">Accueil</a>
+        <a href="blog.html" class="hover:text-green-400 transition">Blog</a>
+        <a href="contact.html" class="hover:text-green-400 transition">Contact</a>
+         <a href="developpeur.html" class="hover:text-green-400 transition">Dévellopeur</a>
+      </nav>
+      <!-- Menu mobile -->
+      <button class="md:hidden text-green-400 text-2xl" aria-label="Menu">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Présentation -->
+  <section class="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-12">
+    <div class="flex-shrink-0">
+      <img src="assets/images/dev.jpg" alt="Photo du développeur" class="w-40 h-40 rounded-full shadow-lg border-4 border-green-400 object-cover mb-6 md:mb-0">
+    </div>
+    <div>
+      <h2 class="text-3xl font-extrabold text-green-400 mb-4">À propos du développeur</h2>
+      <p class="text-gray-200 mb-4">
+        Bonjour ! Je m'appelle <span class="font-bold text-green-400">Vernon Christ-vie KIBAKA</span>, développeur full stack passionné basé à Brazzaville. 
+        Je crée des sites modernes, applications mobiles rapides et adaptés à vos besoins. 
+        Ce projet "Les Bons Coins du Congo" est né de ma volonté de valoriser les lieux et talents locaux à travers le digital.
+      </p>
+      <p class="text-gray-400 mb-4">
+        Je maîtrise HTML, CSS, JavaScript, Tailwind, React, Node.js et bien d'autres technologies. 
+        Je propose aussi des services de création de sites vitrines, e-commerce, blogs, portfolios et applications sur mesure.
+      </p>
+      <a href="#contact-dev" class="bg-green-400 text-gray-900 px-6 py-3 rounded-lg font-bold shadow hover:bg-green-500 transition">Me contacter</a>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="container mx-auto px-6 py-8">
+    <h3 class="text-2xl font-bold text-green-400 mb-6 text-center">Mon Portfolio</h3>
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition">
+        <img src="assets/images/portfolio1.jpg" alt="Projet 1" class="w-full h-32 object-cover">
+        <div class="p-5">
+          <h4 class="text-green-400 font-bold mb-2">Site Vitrine - Restaurant</h4>
+          <p class="text-gray-300 text-sm mb-2">Un site moderne pour un restaurant local avec menu interactif et réservation en ligne.</p>
+          <a href="#" class="text-green-400 hover:underline text-sm">Voir le projet</a>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition">
+        <img src="assets/images/portfolio2.jpg" alt="Projet 2" class="w-full h-32 object-cover">
+        <div class="p-5">
+          <h4 class="text-green-400 font-bold mb-2">Blog Voyage</h4>
+          <p class="text-gray-300 text-sm mb-2">Blog responsive pour partager des expériences et conseils de voyage au Congo.</p>
+          <a href="#" class="text-green-400 hover:underline text-sm">Voir le projet</a>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition">
+        <img src="assets/images/portfolio3.jpg" alt="Projet 3" class="w-full h-32 object-cover">
+        <div class="p-5">
+          <h4 class="text-green-400 font-bold mb-2">Application de réservation</h4>
+          <p class="text-gray-300 text-sm mb-2">Application web pour réserver des hôtels et restaurants en temps réel.</p>
+          <a href="#" class="text-green-400 hover:underline text-sm">Voir le projet</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact développeur -->
+  <section id="contact-dev" class="container mx-auto px-6 py-8 max-w-xl bg-gray-800 rounded-2xl shadow-xl mt-12">
+    <h3 class="text-2xl font-bold text-green-400 mb-6 text-center">Contactez-moi</h3>
+    <form class="space-y-6">
+      <div>
+        <label for="nom" class="block mb-2 font-semibold text-green-400">Nom</label>
+        <input type="text" id="nom" name="nom" required class="w-full p-3 rounded-lg bg-gray-900 text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-400" placeholder="Votre nom">
+      </div>
+      <div>
+        <label for="email" class="block mb-2 font-semibold text-green-400">Email</label>
+        <input type="email" id="email" name="email" required class="w-full p-3 rounded-lg bg-gray-900 text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-400" placeholder="Votre email">
+      </div>
+      <div>
+        <label for="message" class="block mb-2 font-semibold text-green-400">Message</label>
+        <textarea id="message" name="message" rows="5" required class="w-full p-3 rounded-lg bg-gray-900 text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-400" placeholder="Votre message"></textarea>
+      </div>
+      <button type="submit" class="bg-green-400 text-gray-900 px-8 py-3 rounded-lg font-bold shadow hover:bg-green-500 transition w-full">Envoyer</button>
+    </form>
+    <div class="mt-8 text-gray-300 text-center">
+      <p><span class="font-semibold text-green-400">Email :</span> doreakibaka@gmail.com </p>
+      <p><span class="font-semibold text-green-400">Téléphone :</span> +242 06 702 39 96</p>
+      <div class="flex justify-center gap-4 mt-4">
+        <a href="#" class="hover:text-green-400 transition"><span class="text-2xl">🌐</span></a>
+        <a href="#" class="hover:text-green-400 transition"><span class="text-2xl">🐦</span></a>
+        <a href="#" class="hover:text-green-400 transition"><span class="text-2xl">💼</span></a>
+        <a href="#" class="hover:text-green-400 transition"><span class="text-2xl">📸</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-8 mt-12">
+    <div class="container mx-auto px-6 text-center">
+      <div class="mb-2">
+        <a href="index.html" class="mx-2 hover:text-green-400 transition">Accueil</a>
+        <a href="blog.html" class="mx-2 hover:text-green-400 transition">Blog</a>
+        <a href="contact.html" class="mx-2 hover:text-green-400 transition">Contact</a>
+        <a href="dev.html" class="mx-2 hover:text-green-400 transition">Développeur</a>
+      </div>
+      <div>
+        &copy; 2025 Bons Coins du pays. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
